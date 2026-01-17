@@ -1,0 +1,641 @@
+<!-- Global Nav -->
+<nav [class]="'fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent ' + (scrolled() ? 'glass-nav py-3' : 'bg-transparent py-5')">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center gap-3 transition-transform duration-300 origin-left" [class.scale-90]="scrolled()">
+      <div class="w-8 h-8 relative">
+        <svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
+          <defs>
+            <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#11998e"/>
+              <stop offset="100%" style="stop-color:#38ef7d"/>
+            </linearGradient>
+          </defs>
+          <path d="M20 25 Q35 25 35 40 Q35 55 50 75" stroke="url(#navGrad)" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M80 25 Q65 25 65 40 Q65 55 50 75" stroke="url(#navGrad)" stroke-width="12" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <span class="font-semibold text-xl tracking-tight">vivide</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
+      <a href="#features" class="nav-link hover:text-white">功能特性</a>
+      <a href="#scenarios" class="nav-link hover:text-white">使用场景</a>
+      <a href="#about" class="nav-link hover:text-white">关于我们</a>
+    </div>
+
+    <!-- CTA -->
+    <div class="flex items-center gap-4">
+      <button class="bg-white text-black px-5 py-2 rounded-full text-sm font-medium nav-cta hover:bg-neutral-100">
+        开始创作
+      </button>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Section 1: Hero -->
+<section class="hero-section min-h-screen flex flex-col items-center justify-center pt-20">
+  <!-- Dynamic Grid Background -->
+  <div class="hero-grid absolute inset-0 pointer-events-none"></div>
+  
+  <!-- Particles -->
+  <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s; animation-duration: 8s;"></div>
+  <div class="particle" style="top: 60%; left: 80%; animation-delay: 2s; animation-duration: 12s;"></div>
+  <div class="particle" style="top: 40%; left: 30%; animation-delay: 4s; animation-duration: 10s;"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center max-w-5xl px-6">
+    <!-- Breathing Logo -->
+    <div class="mb-12 flex justify-center">
+      <div class="w-32 h-32 md:w-40 md:h-40 hero-logo">
+        <svg viewBox="0 0 100 100" fill="none" class="w-full h-full">
+           <defs>
+            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#11998e"/>
+              <stop offset="100%" style="stop-color:#38ef7d"/>
+            </linearGradient>
+          </defs>
+          <path d="M20 25 Q35 25 35 40 Q35 55 50 75" stroke="url(#heroGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <path d="M80 25 Q65 25 65 40 Q65 55 50 75" stroke="url(#heroGrad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Headlines -->
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+      <span class="text-white font-light mr-3 md:mr-5">你的</span>
+      <span class="hero-title-highlight" data-text="AI Video Creator">
+        AI Video Creator
+      </span>
+    </h1>
+    
+    <!-- Subtitle -->
+    <p class="text-xl md:text-2xl text-neutral-300/80 mb-12 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+      不只是工具，而是懂你、陪你、和你一起成长的创作搭档
+    </p>
+
+    <!-- Buttons -->
+    <div class="hero-buttons">
+      <button class="btn-primary group">
+        <span class="relative z-10 flex items-center gap-2">
+          开始创作 
+          <svg class="w-5 h-5 arrow group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <span class="scroll-text">SCROLL</span>
+    <div class="scroll-mouse"></div>
+  </div>
+</section>
+
+<!-- Section 2: Pain Points (Redesigned) -->
+<section class="pain-section py-32 px-6 relative z-10 overflow-hidden">
+  
+  <div class="max-w-6xl mx-auto relative">
+    <div class="text-center mb-24">
+      <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white">
+        很多创作者都在<span class="text-neutral-500">经历这些...</span>
+      </h2>
+      <p class="text-neutral-400 max-w-2xl mx-auto text-lg md:text-xl font-light" style="text-wrap: balance;">
+        创作不该是一座孤岛。我们理解那些深夜里的自我怀疑与迷茫。
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card 1: Imposter Syndrome -->
+      <div class="pain-card rounded-3xl p-10 flex flex-col items-center text-center gap-8 group delay-0 cursor-default">
+        <!-- Animated Icon: Identity/Doubt -->
+        <div class="pain-icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-neutral-400 icon-path transition-colors duration-300">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+            <path d="M15.5 17a3.5 3.5 0 1 0-7 0" opacity="0.5" stroke-dasharray="2 2" />
+          </svg>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-[#38ef7d] transition-colors">"我有资格讲吗?"</h3>
+          <p class="text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors" style="text-wrap: balance;">
+            冒充者综合症让你在按下发布键前犹豫不决，总觉得自己积累不够，声音不配被听到。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: No Audience -->
+      <div class="pain-card rounded-3xl p-10 flex flex-col items-center text-center gap-8 group delay-1000 cursor-default">
+        <!-- Animated Icon: Target/Search -->
+        <div class="pain-icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-neutral-400 icon-path transition-colors duration-300">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v8" />
+            <path d="M8 12h8" />
+            <circle cx="12" cy="12" r="3" stroke-dasharray="2 2" />
+          </svg>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-[#38ef7d] transition-colors">"我不知道讲给谁"</h3>
+          <p class="text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors" style="text-wrap: balance;">
+            用心制作的内容石沉大海。缺乏明确的受众画像，就像在黑暗的房间里独自演讲。
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3: Isolation -->
+      <div class="pain-card rounded-3xl p-10 flex flex-col items-center text-center gap-8 group delay-2000 cursor-default">
+        <!-- Animated Icon: Isolation -->
+        <div class="pain-icon-wrapper w-16 h-16 rounded-2xl flex items-center justify-center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-neutral-400 icon-path transition-colors duration-300">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" opacity="0.3" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" opacity="0.3" />
+          </svg>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-[#38ef7d] transition-colors">"创作太孤独..."</h3>
+          <p class="text-neutral-400 leading-relaxed group-hover:text-neutral-300 transition-colors" style="text-wrap: balance;">
+            一个人身兼数职，遇到瓶颈没人讨论，最初的热情在繁琐的流程中一点点消耗殆尽。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Five Roles -->
+<section id="features" class="py-32 px-6 bg-[#0d0d0d] overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-light text-center mb-24">Vivide 是你的<span class="text-gradient font-medium">五重身份伙伴</span></h2>
+
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+      
+      <!-- Left: Text Content (40%) -->
+      <div class="w-full lg:w-2/5 relative min-h-[300px] flex items-center order-2 lg:order-1">
+        @for (role of roles; track role.id; let i = $index) {
+          <div 
+            class="absolute inset-0 flex flex-col justify-center transition-all duration-700 ease-out"
+            [class]="activeRoleIndex() === i ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-8 pointer-events-none z-0'"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-5xl lg:text-6xl filter drop-shadow-[0_0_10px_rgba(56,239,125,0.3)]">{{ role.icon }}</span>
+              <div class="h-12 w-px bg-neutral-800"></div>
+              <div class="text-[#11998e] text-sm font-bold tracking-widest uppercase">ROLE 0{{i + 1}}</div>
+            </div>
+            
+            <h3 class="text-3xl md:text-5xl font-bold mb-4 text-white">{{ role.title }}</h3>
+            <p class="text-xl text-[#38ef7d] font-light mb-6">{{ role.desc }}</p>
+            <p class="text-neutral-400 leading-relaxed text-lg max-w-lg">{{ role.detail }}</p>
+          </div>
+        }
+      </div>
+
+      <!-- Right: Circular Interaction (60%) -->
+      <div class="w-full lg:w-3/5 order-1 lg:order-2 flex justify-center lg:justify-end">
+        <div class="relative w-[340px] h-[340px] md:w-[500px] md:h-[500px] flex-shrink-0">
+          
+          <!-- Orbit Background & Lines -->
+          <svg class="absolute inset-0 w-full h-full pointer-events-none" style="transform: rotate(0deg);">
+             <!-- Ambient Circle -->
+             <circle cx="50%" cy="50%" r="40%" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="8 8" class="opacity-30 animate-spin-slow" style="transform-origin: center;" />
+             
+             <!-- Connecting Lines -->
+             @for(role of roles; track role.id; let i = $index) {
+               <line 
+                 x1="50%" y1="50%" 
+                 [attr.x2]="getRolePos(i).x + '%'" 
+                 [attr.y2]="getRolePos(i).y + '%'" 
+                 class="transition-all duration-500 ease-in-out"
+                 [attr.stroke]="activeRoleIndex() === i ? '#38ef7d' : '#222'"
+                 [attr.stroke-width]="activeRoleIndex() === i ? 2 : 1"
+                 [attr.stroke-opacity]="activeRoleIndex() === i ? 0.6 : 0.2"
+                 stroke-linecap="round"
+               />
+               
+               <!-- Active Line Pulse Effect -->
+               @if(activeRoleIndex() === i) {
+                 <circle [attr.cx]="getRolePos(i).x + '%'" [attr.cy]="getRolePos(i).y + '%'" r="3" fill="#38ef7d">
+                    <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+                 </circle>
+               }
+             }
+          </svg>
+
+          <!-- Center Glowing Logo -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-[#0a0a0a] rounded-full flex items-center justify-center border border-neutral-800 z-10 shadow-[0_0_50px_rgba(17,153,142,0.2)]">
+            <!-- Glow Layer -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#11998e] to-[#38ef7d] opacity-20 blur-xl animate-pulse"></div>
+            
+            <!-- Original Logo SVG -->
+            <svg viewBox="0 0 100 100" fill="none" class="w-16 h-16 md:w-20 md:h-20 relative z-10">
+              <defs>
+                <linearGradient id="centerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#11998e"/>
+                  <stop offset="100%" style="stop-color:#38ef7d"/>
+                </linearGradient>
+              </defs>
+              <!-- Left curve -->
+              <path d="M20 25 Q35 25 35 40 Q35 55 50 75" stroke="url(#centerLogoGrad)" stroke-width="8" stroke-linecap="round" fill="none" class="drop-shadow-[0_0_10px_rgba(56,239,125,0.5)]"/>
+              <!-- Right curve -->
+              <path d="M80 25 Q65 25 65 40 Q65 55 50 75" stroke="url(#centerLogoGrad)" stroke-width="8" stroke-linecap="round" fill="none" class="drop-shadow-[0_0_10px_rgba(56,239,125,0.5)]"/>
+            </svg>
+          </div>
+
+          <!-- Interactive Icons -->
+          @for (role of roles; track role.id; let i = $index) {
+            <button 
+              (click)="setActiveRole(i)"
+              class="absolute w-16 h-16 md:w-20 md:h-20 -ml-8 -mt-8 md:-ml-10 md:-mt-10 rounded-full flex items-center justify-center border-2 transition-all duration-500 z-20 cursor-pointer bg-[#0a0a0a]"
+              [class]="activeRoleIndex() === i ? 'border-[#38ef7d] shadow-[0_0_30px_rgba(56,239,125,0.5)] scale-125 z-30' : 'border-neutral-800 text-neutral-600 hover:border-neutral-600 hover:text-neutral-400 hover:scale-110'"
+              [style.left.%]="getRolePos(i).x"
+              [style.top.%]="getRolePos(i).y"
+            >
+              <span class="text-2xl md:text-3xl transition-transform duration-500" [class.rotate-0]="true">{{ role.icon }}</span>
+              
+              <!-- Active Ring -->
+              @if(activeRoleIndex() === i) {
+                <div class="absolute inset-[-4px] border border-[#38ef7d] rounded-full opacity-50 animate-ping"></div>
+              }
+            </button>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Comparison Slider -->
+<section class="py-32 bg-[#0a0a0a] relative overflow-hidden" #comparisonSection>
+  <!-- Mesh Backgrounds -->
+  <div class="mesh-blob-1"></div>
+  <div class="mesh-blob-2"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <h2 class="text-3xl md:text-4xl font-light text-center mb-16">为什么选择 <span class="vivide-text-grad font-bold">Vivide</span>?</h2>
+
+    <!-- Slider Container -->
+    <div #sliderContainer
+         (mousedown)="onDragStart($event, sliderContainer)" 
+         (touchstart)="onDragStart($event, sliderContainer)"
+         (mousemove)="onDragMove($event)"
+         (touchmove)="onDragMove($event)"
+         (mouseup)="onDragEnd()"
+         (touchend)="onDragEnd()"
+         (mouseleave)="onDragEnd()"
+         class="relative w-full h-[600px] rounded-3xl overflow-hidden cursor-ew-resize select-none touch-none border border-white/5 group slider-glow-shadow">
+      
+      <!-- Right Side (Vivide) - Background Layer -->
+      <div class="absolute inset-0 bg-[#0c120f] flex items-center justify-end px-12 md:px-24">
+        <div class="text-right w-1/2 transition-all duration-1000 transform"
+             [class.translate-x-0]="visibleComparison()"
+             [class.opacity-100]="visibleComparison()"
+             [class.translate-x-20]="!visibleComparison()"
+             [class.opacity-0]="!visibleComparison()">
+          
+          <h3 class="text-3xl font-bold text-[#38ef7d] mb-10 tracking-wide">Vivide</h3>
+          <ul class="space-y-8 text-lg text-white font-light leading-loose">
+            <li class="flex items-center justify-end gap-4">
+              <span class="text-white/90">记住你的偏好</span>
+              <!-- Glowing Check Icon -->
+              <svg class="w-6 h-6 text-[#38ef7d] glow-check flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </li>
+            <li class="flex items-center justify-end gap-4">
+              <span class="text-white/90">越用越懂你</span>
+              <svg class="w-6 h-6 text-[#38ef7d] glow-check flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </li>
+            <li class="flex items-center justify-end gap-4">
+              <span class="text-white/90">AI 全程陪伴</span>
+              <svg class="w-6 h-6 text-[#38ef7d] glow-check flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </li>
+            <li class="flex items-center justify-end gap-4">
+              <span class="text-white/90">长期成长关系</span>
+              <svg class="w-6 h-6 text-[#38ef7d] glow-check flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Left Side (Traditional) - Overlay Layer -->
+      <!-- We use fixed-width inner container to prevent text squashing when masking shrinks -->
+      <div class="absolute inset-0 overflow-hidden border-r border-white/10 z-10"
+           [style.width.%]="sliderValue()">
+        
+        <!-- Inner Container: Matches the full slider width exactly -->
+        <div class="h-full bg-[#161616] flex items-center px-12 md:px-24"
+             [style.width.px]="sliderWidth()">
+             
+           <!-- Content: Takes exactly half of the FULL width, aligned left -->
+           <div class="w-1/2 transition-all duration-1000 delay-100 transform"
+               [class.translate-x-0]="visibleComparison()"
+               [class.opacity-100]="visibleComparison()"
+               [class.-translate-x-20]="!visibleComparison()"
+               [class.opacity-0]="!visibleComparison()">
+            
+            <h3 class="text-3xl font-bold text-neutral-500 mb-10 tracking-wide">传统工具</h3>
+            <ul class="space-y-8 text-lg text-neutral-400 font-light leading-loose">
+              <li class="flex items-center gap-4 group/item">
+                <!-- Subtle Gray X Icon -->
+                <div class="w-6 h-6 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0 group-hover/item:border-neutral-600 transition-colors">
+                   <svg class="w-3 h-3 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                   </svg>
+                </div>
+                <span class="whitespace-nowrap">每次从零开始</span>
+              </li>
+              <li class="flex items-center gap-4 group/item">
+                <div class="w-6 h-6 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0 group-hover/item:border-neutral-600 transition-colors">
+                   <svg class="w-3 h-3 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                   </svg>
+                </div>
+                <span class="whitespace-nowrap">工具不懂你</span>
+              </li>
+              <li class="flex items-center gap-4 group/item">
+                <div class="w-6 h-6 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0 group-hover/item:border-neutral-600 transition-colors">
+                   <svg class="w-3 h-3 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                   </svg>
+                </div>
+                <span class="whitespace-nowrap">孤独创作</span>
+              </li>
+              <li class="flex items-center gap-4 group/item">
+                <div class="w-6 h-6 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0 group-hover/item:border-neutral-600 transition-colors">
+                   <svg class="w-3 h-3 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                   </svg>
+                </div>
+                <span class="whitespace-nowrap">仅仅是单次使用</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Handle -->
+      <div class="absolute top-0 bottom-0 w-1 slider-handle-line cursor-ew-resize flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+           [style.left.%]="sliderValue()">
+        
+        <!-- Handle Button -->
+        <div class="w-12 h-12 bg-[#0a0a0a] border border-white/20 rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110 z-10 animate-handle-hint">
+          
+          <!-- Breathing Dots -->
+          <div class="absolute -left-4 w-1 h-1 bg-white/50 rounded-full"></div>
+          <div class="absolute -right-4 w-1 h-1 bg-white/50 rounded-full"></div>
+
+          <svg viewBox="0 0 100 100" fill="none" class="w-7 h-7">
+            <path d="M20 25 Q35 25 35 40 Q35 55 50 75" stroke="#11998e" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M80 25 Q65 25 65 40 Q65 55 50 75" stroke="#38ef7d" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Drag Hint -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-neutral-500 uppercase tracking-widest bg-black/50 px-4 py-1 rounded-full backdrop-blur-sm pointer-events-none transition-opacity"
+           [class.opacity-0]="isDragging()">
+        Drag to Compare
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Workflow Timeline -->
+<section class="py-32 px-6 relative overflow-visible">
+  <!-- Mesh Gradients for Atmosphere -->
+  <div class="background-glow left-glow"></div>
+  <div class="background-glow right-glow"></div>
+
+  <div class="max-w-5xl mx-auto relative z-10">
+    
+    <!-- Title Area (Updated Left Aligned Layout with Visual Anchor) -->
+    <div class="relative flex flex-col items-start mb-24 pl-4 md:pl-0">
+       
+       <!-- Main Title with Glow -->
+       <div class="relative group">
+         <h2 class="text-main-modern text-6xl md:text-8xl mb-2 relative z-10 cursor-default">
+           完整旅程
+         </h2>
+         <!-- Glow -->
+         <div class="absolute inset-0 blur-[60px] bg-[#3EE08F]/20 rounded-full -z-10 opacity-50 group-hover:opacity-80 transition-opacity duration-500"></div>
+       </div>
+
+       <!-- Subtitle Row -->
+       <div class="text-sub-modern mt-4 text-lg md:text-xl">
+         <span class="serif-italic text-2xl">From Idea</span>
+         
+         <!-- Animated SVG Arrow pointing down/right -->
+         <svg class="w-24 h-6 overflow-visible" viewBox="0 0 100 24" fill="none">
+            <!-- Line -->
+            <path d="M0 12 H80" stroke="#3EE08F" stroke-width="1" stroke-dasharray="4 4" class="opacity-60">
+               <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+            </path>
+            <!-- Arrowhead -->
+            <path d="M75 7 L80 12 L75 17" stroke="#3EE08F" stroke-width="1" class="opacity-80"/>
+         </svg>
+
+         <span class="serif-italic text-2xl">to Audience</span>
+       </div>
+
+       <!-- Connector from Header to Step 1 (Visual Anchor) -->
+       <div class="absolute left-20 top-20 w-full h-[150px] pointer-events-none hidden md:block -z-10 opacity-40">
+         <svg width="100%" height="100%" viewBox="0 0 800 150" preserveAspectRatio="none">
+            <path d="M 100 20 C 100 100, 400 50, 400 150" fill="none" stroke="url(#connectorGrad)" stroke-width="1.5" stroke-dasharray="6 6">
+               <animate attributeName="stroke-dashoffset" from="12" to="0" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <defs>
+              <linearGradient id="connectorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#3EE08F" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#3EE08F" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+         </svg>
+       </div>
+
+    </div>
+    
+    <div class="relative pt-12">
+      <!-- Center Line -->
+      <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#11998e] via-[#38ef7d] to-transparent opacity-30 md:-translate-x-1/2 ml-6 md:ml-0"></div>
+
+      <!-- Steps Iteration -->
+      @for(step of timelineSteps; track step.id; let i = $index) {
+        <div #timelineStep [attr.data-index]="i" class="relative grid grid-cols-1 md:grid-cols-2 gap-12 mb-32 group">
+          
+          <!-- Marker -->
+          <div class="absolute left-6 md:left-1/2 top-0 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-[#11998e] -translate-x-1/2 z-10 group-hover:scale-150 group-hover:bg-[#38ef7d] transition-all duration-500 shadow-[0_0_15px_rgba(17,153,142,0.5)]"></div>
+
+          <!-- Left/Right Logic -->
+          <div [class]="(i % 2 === 0 ? 'md:text-right md:order-1' : 'md:order-2 md:pl-12') + ' pl-16 md:pl-0 transition-all duration-700'"
+               [class.opacity-0]="!visibleSteps().has(i)"
+               [class.translate-y-10]="!visibleSteps().has(i)">
+            <div class="text-[#38ef7d] text-sm font-bold tracking-widest mb-2">STEP 0{{ i + 1 }}</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+               {{ step.emoji }} {{ step.title }}
+            </h3>
+            <p class="text-neutral-400 leading-relaxed text-balance">
+               {{ step.description }}
+            </p>
+          </div>
+
+          <div [class]="(i % 2 === 0 ? 'md:order-2 md:pl-12' : 'md:text-right md:order-1 md:pr-12') + ' pl-16 md:pl-0 transition-all duration-700 delay-200'"
+               [class.opacity-0]="!visibleSteps().has(i)"
+               [class.translate-y-10]="!visibleSteps().has(i)">
+            <!-- Glass Mockup Card -->
+            <div class="glass-card rounded-2xl aspect-video w-full flex items-center justify-center relative overflow-hidden group-hover:border-[#38ef7d]/30">
+              
+              <!-- Subtle Inner Gradient -->
+              <div class="absolute inset-0 bg-gradient-to-br from-[#11998e]/10 to-transparent opacity-50"></div>
+              
+              <span class="text-neutral-500 text-sm font-light tracking-widest relative z-10">UI PREVIEW 0{{ i + 1 }}</span>
+              
+              <!-- Simple Abstract UI Lines -->
+              <div class="absolute bottom-4 left-6 right-6 h-1.5 bg-white/10 rounded-full w-2/3"></div>
+              <div class="absolute bottom-8 left-6 right-16 h-1.5 bg-white/10 rounded-full w-1/2"></div>
+            </div>
+          </div>
+
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Scenarios (Scattered Bubbles) -->
+<section id="scenarios" class="py-32 px-6 border-t border-neutral-900 overflow-hidden relative min-h-[900px]">
+  <!-- Optional ambient glow for section -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#11998e]/5 rounded-full blur-[100px] -z-10"></div>
+
+  <div class="max-w-7xl mx-auto text-center relative h-full">
+    <h2 class="text-3xl md:text-5xl font-light mb-12 relative z-10">适合各种<span class="vivide-text-grad font-bold">知识创作</span>场景</h2>
+    
+    <!-- Bubble Container -->
+    <div class="relative w-full h-[1000px] mx-auto hidden md:block">
+      @for(scenario of scenarios; track scenario.label) {
+        <div class="scenario-item"
+             [style.top]="scenario.top"
+             [style.left]="scenario.left"
+             [style.animation-delay]="scenario.delay"
+             [style.animation-duration]="scenario.duration">
+          
+          <!-- Round Bubble -->
+          <div class="scenario-bubble relative"
+               [style.width.px]="scenario.size"
+               [style.height.px]="scenario.size"
+               [style.background-image]="'url(' + scenario.image + ')'">
+               <!-- Shine reflection overlay -->
+               <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 to-transparent opacity-30 pointer-events-none"></div>
+          </div>
+          
+          <!-- Label Outside -->
+          <div class="scenario-label">
+            {{ scenario.label }}
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Mobile Fallback (Grid) -->
+    <div class="grid grid-cols-2 gap-4 md:hidden">
+       @for(scenario of scenarios; track scenario.label) {
+          <div class="flex flex-col items-center">
+             <div class="w-24 h-24 rounded-full bg-cover bg-center border border-white/10" 
+                  [style.background-image]="'url(' + scenario.image + ')'"></div>
+             <div class="mt-2 text-sm text-neutral-400">{{ scenario.label }}</div>
+          </div>
+       }
+    </div>
+
+    <!-- New Call To Action Area (Reveals on Scroll) -->
+    <div #ctaSection class="relative z-20 mt-32 mb-16 text-center transition-all duration-1000 transform"
+         [class.opacity-0]="!visibleCallToAction()"
+         [class.translate-y-10]="!visibleCallToAction()"
+         [class.opacity-100]="visibleCallToAction()"
+         [class.translate-y-0]="visibleCallToAction()">
+        
+        <p class="text-sm md:text-base text-[#38ef7d] font-medium tracking-[0.2em] uppercase mb-4">Ready to Start?</p>
+        
+        <h3 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          别让灵感<br class="md:hidden" />止步于观望
+        </h3>
+        
+        <p class="text-neutral-400 max-w-xl mx-auto text-lg md:text-xl font-light leading-relaxed mb-10 text-balance">
+          把手交给 Vivide，去探索、去定义<br/>那个独属于你的<span class="text-white font-medium border-b border-[#38ef7d]/50 pb-1">创作主场</span>。
+        </p>
+
+        <button class="group relative px-8 py-3 bg-white text-black rounded-full font-bold overflow-hidden transition-transform active:scale-95 hover:shadow-[0_0_30px_rgba(56,239,125,0.4)]">
+          <span class="relative z-10 flex items-center gap-2">
+            立刻开始
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </span>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#11998e] to-[#38ef7d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <span class="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 z-20 transition-opacity duration-300 flex items-center gap-2">
+            立刻开始
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </span>
+        </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="about" class="bg-black border-t border-neutral-900 py-16 px-6 relative z-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+    <!-- Brand -->
+    <div class="col-span-1 md:col-span-2">
+      <div class="flex items-center gap-2 mb-6">
+        <svg viewBox="0 0 100 100" fill="none" class="w-6 h-6">
+          <path d="M20 25 Q35 25 35 40 Q35 55 50 75" stroke="#444" stroke-width="12" stroke-linecap="round" fill="none"/>
+          <path d="M80 25 Q65 25 65 40 Q65 55 50 75" stroke="#444" stroke-width="12" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="font-bold text-neutral-400">vivide</span>
+      </div>
+      <p class="text-neutral-600 max-w-sm mb-8">
+        "AI时代，人的价值是判断、情境、信任。Vivide 让这些'活人感'被放大。"
+      </p>
+      <div class="text-xs text-neutral-700">
+        © 2025 Vivide · Hackathon Project
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <h4 class="text-white font-medium mb-4">产品</h4>
+      <ul class="space-y-3 text-sm text-neutral-500">
+        <li><a href="#" class="nav-link hover:text-[#11998e]">功能特性</a></li>
+        <li><a href="#" class="nav-link hover:text-[#11998e]">使用场景</a></li>
+        <li><a href="#" class="nav-link hover:text-[#11998e]">下载应用</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-medium mb-4">关于</h4>
+      <ul class="space-y-3 text-sm text-neutral-500">
+        <li><a href="#" class="nav-link hover:text-[#11998e]">团队故事</a></li>
+        <li><a href="#" class="nav-link hover:text-[#11998e]">Lovart 灵感</a></li>
+        <li><a href="#" class="nav-link hover:text-[#11998e]">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
