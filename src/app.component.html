@@ -97,6 +97,46 @@
   </div>
 </section>
 
+<!-- Section 1.5: Market Insights (New) -->
+<section class="py-24 px-6 bg-[#0a0a0a] relative z-20">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-2xl md:text-3xl font-light tracking-wide text-neutral-400">数字里的<span class="text-white font-semibold">视频时代</span></h2>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for(stat of marketStats; track stat.label; let i = $index) {
+        <div class="group relative bg-white/5 border border-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:border-[#38ef7d]/50 hover:bg-white/10 hover:-translate-y-2">
+           <!-- Icon -->
+           <div class="mb-6 w-16 h-16 rounded-full bg-gradient-to-br from-[#11998e]/20 to-[#38ef7d]/20 flex items-center justify-center text-[#38ef7d] group-hover:scale-110 transition-transform duration-500">
+             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+               <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="stat.iconPath"></path>
+             </svg>
+           </div>
+           
+           <!-- Number -->
+           <div class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#38ef7d] to-[#11998e] bg-clip-text text-transparent mb-4 tracking-tight drop-shadow-sm">
+             {{ stat.value }}
+           </div>
+
+           <!-- Label -->
+           <h3 class="text-xl text-white font-medium mb-4">{{ stat.label }}</h3>
+           
+           <!-- Desc -->
+           <p class="text-neutral-400 text-sm leading-relaxed text-balance">
+             {{ stat.desc }}
+           </p>
+
+           <!-- Bottom Shine -->
+           <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-[#38ef7d] blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
 <!-- Section 2: Pain Points (Redesigned) -->
 <section class="pain-section py-32 px-6 relative z-10 overflow-hidden">
   

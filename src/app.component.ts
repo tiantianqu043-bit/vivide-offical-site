@@ -26,6 +26,13 @@ interface Scenario {
   duration: string; // animation duration
 }
 
+interface MarketStat {
+  value: string;
+  label: string;
+  desc: string;
+  iconPath: string; // SVG path d
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -682,6 +689,28 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   visibleComparison = signal(false); // For Section 4 Animation
   sliderWidth = signal(0); // For masking logic
   visibleCallToAction = signal(false);
+  
+  // Section 1.5: Market Stats
+  marketStats: MarketStat[] = [
+    {
+      value: '16.2亿',
+      label: '短视频创作者账号',
+      desc: '人均拥有1个创作者账号，日均上线1.3亿条视频',
+      iconPath: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6'
+    },
+    {
+      value: '95%',
+      label: '用户用短视频学习',
+      desc: '泛知识内容需求激增，3亿+ 泛知识兴趣用户',
+      iconPath: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' // Book icon for Learning
+    },
+    {
+      value: '83%',
+      label: '的想法从未发布内容',
+      desc: '受限于复杂的剪辑工具与镜头恐惧，原本精彩的见解最终沉默于脑海。',
+      iconPath: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' // Lightbulb icon for Ideas
+    }
+  ];
   
   // Section 3: Roles
   activeRoleIndex = signal(0);
